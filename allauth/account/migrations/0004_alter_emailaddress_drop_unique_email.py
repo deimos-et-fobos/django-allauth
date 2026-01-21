@@ -1,13 +1,12 @@
 from django.conf import settings
 from django.db import migrations, models
 
-
 EMAIL_MAX_LENGTH = getattr(settings, "ACCOUNT_EMAIL_MAX_LENGTH", 254)
 
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("account", "0003_alter_emailaddress_create_unique_verified_email"),
+        ("allauth_account", "0003_alter_emailaddress_create_unique_verified_email"),
     ]
 
     operations = [

@@ -6,7 +6,7 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("account", "0004_alter_emailaddress_drop_unique_email"),
+        ("allauth_account", "0004_alter_emailaddress_drop_unique_email"),
     ]
 
     operations = [

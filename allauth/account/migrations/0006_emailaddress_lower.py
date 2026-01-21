@@ -6,7 +6,7 @@ from allauth.account import app_settings
 
 
 def forwards(apps, schema_editor):
-    EmailAddress = apps.get_model("account.EmailAddress")
+    EmailAddress = apps.get_model("allauth_account.EmailAddress")
     User = apps.get_model(settings.AUTH_USER_MODEL)
     EmailAddress.objects.all().exclude(email=Lower("email")).update(
         email=Lower("email")
@@ -20,7 +20,7 @@ def forwards(apps, schema_editor):
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("account", "0005_emailaddress_idx_upper_email"),
+        ("allauth_account", "0005_emailaddress_idx_upper_email"),
     ]
 
     operations = [migrations.RunPython(forwards, migrations.RunPython.noop)]

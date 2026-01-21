@@ -4,7 +4,7 @@ from django.db.models import Count
 
 
 def forwards(apps, schema_editor):
-    EmailAddress = apps.get_model("account.EmailAddress")
+    EmailAddress = apps.get_model("allauth_account.EmailAddress")
     User = apps.get_model(settings.AUTH_USER_MODEL)
     user_email_field = getattr(settings, "ACCOUNT_USER_MODEL_EMAIL_FIELD", "email")
 
@@ -38,7 +38,7 @@ def forwards(apps, schema_editor):
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("account", "0007_emailaddress_idx_email"),
+        ("allauth_account", "0007_emailaddress_idx_email"),
     ]
 
     operations = [

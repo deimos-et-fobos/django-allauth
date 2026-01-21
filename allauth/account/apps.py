@@ -8,6 +8,7 @@ from allauth import app_settings
 
 class AccountConfig(AppConfig):
     name = "allauth.account"
+    label = "allauth_account"
     verbose_name = _("Accounts")
     default_auto_field = app_settings.DEFAULT_AUTO_FIELD or "django.db.models.AutoField"
 
